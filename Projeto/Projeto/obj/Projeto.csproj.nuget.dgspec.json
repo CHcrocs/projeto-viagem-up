@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\chcyt\\OneDrive\\Documentos\\Códigos\\projeto-viagem-up\\projeto\\Projeto\\Projeto.csproj": {}
+    "C:\\Users\\adrie\\Documents\\GitHub\\projeto-viagem-up\\Projeto\\Projeto\\Projeto.csproj": {}
   },
   "projects": {
-    "C:\\Users\\chcyt\\OneDrive\\Documentos\\Códigos\\projeto-viagem-up\\projeto\\Projeto\\Projeto.csproj": {
+    "C:\\Users\\adrie\\Documents\\GitHub\\projeto-viagem-up\\Projeto\\Projeto\\Projeto.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\chcyt\\OneDrive\\Documentos\\Códigos\\projeto-viagem-up\\projeto\\Projeto\\Projeto.csproj",
+        "projectUniqueName": "C:\\Users\\adrie\\Documents\\GitHub\\projeto-viagem-up\\Projeto\\Projeto\\Projeto.csproj",
         "projectName": "Projeto",
-        "projectPath": "C:\\Users\\chcyt\\OneDrive\\Documentos\\Códigos\\projeto-viagem-up\\projeto\\Projeto\\Projeto.csproj",
-        "packagesPath": "C:\\Users\\chcyt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\chcyt\\OneDrive\\Documentos\\Códigos\\projeto-viagem-up\\projeto\\Projeto\\obj\\",
+        "projectPath": "C:\\Users\\adrie\\Documents\\GitHub\\projeto-viagem-up\\Projeto\\Projeto\\Projeto.csproj",
+        "packagesPath": "C:\\Users\\adrie\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\adrie\\Documents\\GitHub\\projeto-viagem-up\\Projeto\\Projeto\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\chcyt\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\adrie\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -42,16 +42,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.4.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
