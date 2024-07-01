@@ -6,6 +6,8 @@ import VooAlterar from "./components/pages/voo/Voo-alterar";
 import TripulacaoListar from "./components/pages/tripulacao/tripulacao-listar";
 import TripulacaoCadastrar from "./components/pages/tripulacao/tripulacao-cadastrar";
 import TripulacaoAlterar from "./components/pages/tripulacao/tripulacao-alterar";
+import PassageiroListar from "./components/pages/passageiro/passageiro-listar";
+import PassageiroCadastrar from "./components/pages/passageiro/passageiro-cadastrar";
 import "./App.css";
 
 function App() {
@@ -29,6 +31,12 @@ function App() {
             <li>
               <Link to="/pages/tripulacao/cadastrar">Cadastrar tripulacao</Link>
             </li>
+            <li>
+              <Link to="/pages/passageiro/listar">Listar passageiros</Link>
+            </li>
+            <li>
+              <Link to="/pages/passageiro/cadastrar">Cadastrar passageiros</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -41,7 +49,9 @@ function App() {
           <Route path="/pages/tripulacao/listar" element={<TripulacaoListar />} />
           <Route path="/pages/tripulacao/cadastrar" element={<TripulacaoCadastrar />} />
           <Route path="/pages/tripulacao/alterar/:id" element={<TripulacaoAlterar />} />
-          
+          {/* Crud Passageiro */}
+          <Route path="/pages/passageiro/listar" element={<PassageiroListar />} />
+          <Route path="/pages/passageiro/cadastrar" element={<PassageiroCadastrar />} />
         </Routes>
       </BrowserRouter>
     </div>
