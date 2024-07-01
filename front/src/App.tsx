@@ -8,6 +8,7 @@ import TripulacaoCadastrar from "./components/pages/tripulacao/tripulacao-cadast
 import TripulacaoAlterar from "./components/pages/tripulacao/tripulacao-alterar";
 import PassageiroListar from "./components/pages/passageiro/passageiro-listar";
 import PassageiroCadastrar from "./components/pages/passageiro/passageiro-cadastrar";
+import PassageiroAlterar from "./components/pages/passageiro/passageiro-alterar";
 import "./App.css";
 
 function App() {
@@ -52,6 +53,7 @@ function App() {
           {/* Crud Passageiro */}
           <Route path="/pages/passageiro/listar" element={<PassageiroListar />} />
           <Route path="/pages/passageiro/cadastrar" element={<PassageiroCadastrar />} />
+          <Route path="/pages/passageiro/alterar/:id" element={<PassageiroAlterar />} />
         </Routes>
       </BrowserRouter>
     </div>

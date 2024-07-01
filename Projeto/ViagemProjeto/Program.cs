@@ -230,6 +230,19 @@ app.MapGet("/api/registro_passageiro/listar", async ([FromServices] AppDbContext
     return Results.Ok(passageiros);
 });
 
+app.MapGet("/api/passageiro/buscar/{id}", ([FromRoute] string id,
+    [FromServices] AppDbContext ctx) =>
+{
+    //Expressão lambda em c#
+    Passageiro? passageiro =
+        ctx.Passageiros.FirstOrDefault(x => x.Id == Convert.ToInt32(id));
+    if (passageiro is null)
+    {
+        return Results.NotFound("voo não encontrado!");
+    }
+    return Results.Ok(passageiro);
+});
+
 // Atualizar as informações de um passageiro
 app.MapPut("/api/registro_passageiro/atualizar/{id}", async ([FromRoute] int id, [FromBody] Passageiro passageiroAtualizado, [FromServices] AppDbContext ctx) =>
 {

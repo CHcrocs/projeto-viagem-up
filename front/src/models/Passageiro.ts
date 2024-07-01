@@ -2,7 +2,7 @@ export interface Passageiro {
     id: number;
     nome: string;
     numeroDocumento: string;
-    dataNascimento: Date;
+    dataNascimento: string;
     nacionalidade: string;
     informacoesContato: string;
     sobrenome?: string;

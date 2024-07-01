@@ -56,7 +56,7 @@ function PassageiroListar() {
                             <td>{passageiro.id}</td>
                             <td>{passageiro.nome}</td>
                             <td>{passageiro.numeroDocumento}</td>
-                            <td>{passageiro.dataNascimento instanceof Date ? passageiro.dataNascimento.toLocaleDateString() : ''}</td>
+                            <td>{passageiro.dataNascimento}</td>
                             <td>{passageiro.nacionalidade}</td>
                             <td>{passageiro.informacoesContato}</td>
                             <td>{passageiro.sobrenome}</td>
