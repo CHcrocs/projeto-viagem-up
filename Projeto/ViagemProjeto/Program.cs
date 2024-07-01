@@ -175,6 +175,19 @@ app.MapGet("/api/verificacaoclimatica/listar", ([FromServices] AppDbContext ctx)
     return Results.Ok(VerificacoesClimaticas);
 });
 
+app.MapGet("/api/clima/buscar/{id}", ([FromRoute] string id,
+    [FromServices] AppDbContext ctx) =>
+{
+    //Expressão lambda em c#
+    Clima? clima =
+        ctx.Climas.FirstOrDefault(x => x.Id == Convert.ToInt32(id));
+    if (clima is null)
+    {
+        return Results.NotFound("voo não encontrado!");
+    }
+    return Results.Ok(clima);
+});
+
 // Atualizar as verificações climáticas
 app.MapPut("/api/verificacaoclimatica/atualizar/{id}", async ([FromRoute] int id, [FromBody] Clima verificacaoClimaticaAtualizado, [FromServices] AppDbContext ctx) =>
 {

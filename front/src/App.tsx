@@ -9,6 +9,9 @@ import TripulacaoAlterar from "./components/pages/tripulacao/tripulacao-alterar"
 import PassageiroListar from "./components/pages/passageiro/passageiro-listar";
 import PassageiroCadastrar from "./components/pages/passageiro/passageiro-cadastrar";
 import PassageiroAlterar from "./components/pages/passageiro/passageiro-alterar";
+import ClimaListar from "./components/pages/clima/clima-listar";
+import ClimaCadastrar from "./components/pages/clima/clima-cadastrar";
+import ClimaAtualizar from "./components/pages/clima/clima-atualizar";
 import "./App.css";
 
 function App() {
@@ -38,6 +41,12 @@ function App() {
             <li>
               <Link to="/pages/passageiro/cadastrar">Cadastrar passageiros</Link>
             </li>
+            <li>
+              <Link to="/pages/clima/listar">Listar climas</Link>
+            </li>
+            <li>
+              <Link to="/pages/clima/cadastrar">Cadastrar climas</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -54,6 +63,10 @@ function App() {
           <Route path="/pages/passageiro/listar" element={<PassageiroListar />} />
           <Route path="/pages/passageiro/cadastrar" element={<PassageiroCadastrar />} />
           <Route path="/pages/passageiro/alterar/:id" element={<PassageiroAlterar />} />
+          {/* Crud Clima */}
+          <Route path="/pages/clima/listar" element={<ClimaListar />} />
+          <Route path="/pages/clima/cadastrar" element={<ClimaCadastrar />} />
+          <Route path="/pages/clima/alterar/:id" element={<ClimaAtualizar />} />
         </Routes>
       </BrowserRouter>
     </div>
