@@ -106,6 +106,19 @@ app.MapGet("/api/registro_tripulacao/listar", ([FromServices] AppDbContext ctx) 
     return Results.Ok(Tripulacao);
 });
 
+app.MapGet("/api/tripulacao/buscar/{id}", ([FromRoute] string id,
+    [FromServices] AppDbContext ctx) =>
+{
+    //Expressão lambda em c#
+    Tripulacao? tripulacao =
+        ctx.Tripulacoes.FirstOrDefault(x => x.Id == Convert.ToInt32(id));
+    if (tripulacao is null)
+    {
+        return Results.NotFound("voo não encontrado!");
+    }
+    return Results.Ok(tripulacao);
+});
+
 // Atualizar as informações de um membro da tripulação
 app.MapPut("/api/registro_tripulacao/atualizar/{id}", (int id, Tripulacao registro_tripulacaoAtualizado, AppDbContext ctx) =>
 {
@@ -161,8 +174,6 @@ app.MapGet("/api/verificacaoclimatica/listar", ([FromServices] AppDbContext ctx)
     var VerificacoesClimaticas = ctx.Climas.Include(x => x.Voo).ToList();
     return Results.Ok(VerificacoesClimaticas);
 });
-
-
 
 // Atualizar as verificações climáticas
 app.MapPut("/api/verificacaoclimatica/atualizar/{id}", async ([FromRoute] int id, [FromBody] Clima verificacaoClimaticaAtualizado, [FromServices] AppDbContext ctx) =>

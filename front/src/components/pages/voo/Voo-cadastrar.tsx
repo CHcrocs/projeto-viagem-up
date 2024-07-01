@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { Voo } from "../../../models/Voo";
 import { useNavigate } from "react-router-dom";
-import "./styles.css";
+import "../../../styles.css";
+
 
 function VooCadastrar() {
   const navigate = useNavigate();

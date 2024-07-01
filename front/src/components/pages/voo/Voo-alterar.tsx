@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import { Voo } from "../../../models/Voo";
 import { useNavigate, useParams } from "react-router-dom";
-import "./styles.css";
+import "../../../styles.css";
+
 
 function VooAlterar() {
   const navigate = useNavigate();
@@ -18,7 +19,7 @@ function VooAlterar() {
 
   useEffect(() => {
     if (id) {
-      fetch(`http://localhost:5281/api/registro_voo/buscar/${id}`)
+      fetch(`http://localhost:5281/api/voo/buscar/${id}`)
         .then((resposta) => {
           if (!resposta.ok) {
             throw new Error('Network response was not ok');

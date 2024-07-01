@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Voo } from "../../../models/Voo";
 import { Link } from "react-router-dom";
-import "./styles.css";
+import "../../../styles.css";
 
 function VooListar() {
   const [Voo, setVoos] = useState<Voo[]>([]);

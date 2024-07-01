@@ -18,7 +18,7 @@ GET http://localhost:5281/api/registro_voo/listar
 
 ### 
 
-PUT http://localhost:5281/api/registro_voo/atualizar/1
+PUT http://localhost:5281/api/registro_voo/atualizar/6
 Content-Type: application/json
 
 {
@@ -32,32 +32,33 @@ Content-Type: application/json
 
 # //================================================================================================================
 
+###
 
-# POST http://localhost:5281/api/registro_tripulacao/cadastrar
-# Content-Type: application/json
+POST http://localhost:5281/api/registro_tripulacao/cadastrar
+Content-Type: application/json
 
-# {
-#   "Nome": "Adriel",
-#   "Cargo": "Piloto",
-#   "Funcao": "pilotar o aviao",
-#   "Qualificacoes": "PPL, CPL, ATPL, Certificação Médica, Habilitações de Voo, Treinamento de Emergência",
-#   "HorarioTrabalho": "04:30 as 14:00",
-#   "IdiomasFalados": "Portugues, ingles, espanhol",
-#   "VooId" : 1
-# }
+{
+  "Nome": "Adriel",
+  "Cargo": "Piloto",
+  "Funcao": "pilotar o aviao",
+  "Qualificacoes": "PPL, CPL, ATPL, Certificação Médica, Habilitações de Voo, Treinamento de Emergência",
+  "HorarioTrabalho": "04:30 as 14:00",
+  "IdiomasFalados": "Portugues, ingles, espanhol",
+  "VooId" : 6
+}
 
+###
 
+GET http://localhost:5281/api/registro_tripulacao/listar
 
-# GET http://localhost:5281/api/registro_tripulacao/listar
+###
 
+PUT http://localhost:5281/api/registro_tripulacao/atualizar/1
+Content-Type: application/json
 
-
-# PUT http://localhost:5281/api/registro_tripulacao/atualizar/1
-# Content-Type: application/json
-
-# {
-#     "Nome": "Robin",
-# }
+{
+    "Nome": "Robin"
+}
 
 
 # DELETE http://localhost:5281/api/registro_tripulacao/deletar/1

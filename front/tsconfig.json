@@ -22,7 +22,10 @@
   },
   "include": [
       "src",
-      "src/components/Voo-cadastrar.tsx"
+      "src/components/Voo-cadastrar.tsx",
+      "src/models/Tripulacao.tsx"
   ],
-  "exclude": []
+  "exclude": [
+      "src/components/pages/tripulacao/tripulacao-list.tsx"
+  ]
 }
